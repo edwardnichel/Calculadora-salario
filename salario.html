@@ -1,74 +1,178 @@
-<!doctype html>
-<html lang ="pt-br">
-<head>
-  <meta charset ="UTF-8">
-  <title>Exemplo de formulário.</title>
-</head>
-	<body>
-	<table>
-		<form name="form_cliente" action="salario.php" method="POST"/>
-	<fieldset>
-			<legend>Cálculo salário e descontos</legend>
-	
-	Nome:
-	<input type="text" name="nome"><br>
-	Idade:
-	<input type="number" name="idade"><br>
-	E-mail:
-	<input type="text" name="email"><br>
-	Celular:
-	<input type="tel" name="celular">
-	<br/> <br>
+<html>
+  <title>Folha de Pagamento</title>
+  <meta charset="UTF-8" />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="bootstrap-4.1.3/css/bootstrap.min.css"
+  />
+  <body class="bg-info">
+    <br />
+    <div
+      class="card text-center container-fluid form-group p-3 mb-5 bg-white rounded col-md-5"
+    >
+      <h1 class="h1"><b> Folha de Pagamento </b></h1>
+    </div>
 
-	Cargo: <select size="1" name="cargo" placeholder="Cargo" >
-				<option value="programador">Programador.</option>
-				<option value="analista">Analista.</option>
-				<option value="suporte tecnico">Suporte técnico.</option>
-			</select>
-			<br><br>
+    <div
+      class="container-fluid form-group shadow-lg p-3 mb-5 bg-white rounded col-md-5 table-responsive"
+    >
+      <form action="resultado.php" method="POST">
+        <fieldset class="col-auto rounded">
+          <legend class="">Preencha os campos abaixo:</legend>
 
-	Número de filhos: <select size="1" name="filhos" placeholder="Numero de filhos" >
-				<option value="0">0</option>
-				<option value="1">1</option>
-				<option value="2">2</option>
-				<option value="3">3</option>
-				<option value="4">4</option>
-				<option value="5">5</option>
-			</select>
-			<br><br>
-
-	Salário Base:
-	<input type="text" name="s_base"><br>
-	Data de nascimento:
-	<input type="date" name="d_nascimento"><br>
-	Data de cadastro:
-	<input type="date" name="d_cadastro"><br>
-	Valor da hora:
-	<input type="text" name="v_hora"><br>
-	Quantidade de horas trabalhadas:
-	<input type="text" name="horas_t">
-	<br><br>
-
-	Tipos ambiente: <select size="1" name="ambiente" placeholder="Tipos de ambiente" >
-			<option value="Periculosidade">Periculosidade.</option>
-			<option value="Isalubridade">Isalubridade.</option>
-			</select>
-	<br><br>
-
-	Vale alimentação:	
-	<input type="text" name="v_alimentacao"><br>
-	Adiantamento:
-	<input type="text" name="adiantamento">
-	<br><br>
-
-
-
-			
-				<td><input type="Submit" value="Calcular" /> </td>
-				<td><input type="reset"  value="Limpar Dados" /> </td>
-			</td>
-			</fieldset>	
-		</form>
-	</table>
-</body>
+          <table class="table">
+            <caption>
+              Formulario para verificar o Salario na Folha de Pagamento
+            </caption>
+            <tr>
+              <th>Nome</th>
+              <td>
+                <input
+                  type="text"
+                  class="form-control "
+                  fieldset="teste"
+                  name="nome"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <th>Idade</th>
+              <td>
+                <input
+                  type="number"
+                  class="form-control "
+                  name="idade"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <th>Email</th>
+              <td>
+                <input
+                  type="email"
+                  class="form-control "
+                  placeholder="nome@dominio.com.br"
+                  name="email"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <th>Cargo</th>
+              <td>
+                <select class="form-control" name="cargo">
+                  <option selected>...</option>
+                  <option>Programador</option>
+                  <option>Analista</option>
+                  <option>Suporte Técnico</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <th>Possui Filhos?</th>
+              <td>
+                <input
+                  type="number"
+                  class="form-control"
+                  placeholder="0 para nenhum"
+                  name="filhos"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <th>Salario Base</th>
+              <td>
+                <input
+                  type="number"
+                  class="form-control"
+                  placeholder="R$:2000,00"
+                  name="salario-base"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <th>Data Nascimento</th>
+              <td>
+                <input
+                  type="date"
+                  class="form-control"
+                  name="data-nascimento"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <th>Data Cadastro</th>
+              <td>
+                <input
+                  type="date"
+                  class="form-control"
+                  name="data-cadastro"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <th>Valor por Hora</th>
+              <td>
+                <input
+                  type="number"
+                  class="form-control"
+                  placeholder="R$:50,00"
+                  name="valor-hora"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <th>Horas trabalhadas (dia)</th>
+              <td>
+                <input
+                  type="number"
+                  class="form-control"
+                  placeholder="8"
+                  name="horas-trabalhadas"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <th>Tipos de Ambiente de Trabalho</th>
+              <td>
+                <select class="form-control" name="ambiente">
+                  <option selected>...</option>
+                  <option>Periculosidade</option>
+                  <option>Insalubridade</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <th>Vale Alimentação</th>
+              <td>
+                <input
+                  type="number"
+                  class="form-control"
+                  name="vale-alimentacao"
+                />
+              </td>
+            </tr>
+            <tr>
+              <th>Adiantamento</th>
+              <td>
+                <input type="number" class="form-control" name="adiantamento" />
+              </td>
+            </tr>
+          </table>
+        </fieldset>
+        <div>
+          <input type="submit" value="calcular" class="btn btn-info col" />
+        </div>
+      </form>
+    </div>
+  </body>
 </html>
