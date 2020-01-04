@@ -1,4 +1,4 @@
-# Calculádora Salários
+# Calculadora Salários
 
 Calculádora para descontos de salários. Como: INSS, FGTS e salário liquido.
 
