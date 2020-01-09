@@ -1,6 +1,6 @@
 # Calculadora Salários
 
-Calculádora para descontos de salários. Como: INSS, FGTS e salário liquido.
+Calculadora para descontos de salários. Como: INSS, FGTS e salário liquido.
 
 ## Como usar
 
