@@ -4,4 +4,4 @@ Calculádora para descontos de salários. Como: INSS, FGTS e salário liquido.
 
 ## Como usar
 
-Como é programado em PHP, será preciso rodar no servidor, recomendo usar [USBWebServer](https://www.usbwebserver.net/webserver/) para rodar o PHP.
+Programado em PHP, será necessário rodar no servidor local. Por não necessitar de instalação, recomendo usar o [USBWebServer](https://www.usbwebserver.net/webserver/).
